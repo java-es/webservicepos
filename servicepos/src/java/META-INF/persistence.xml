@@ -15,7 +15,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
         <property name="javax.persistence.jdbc.driver"
         value="com.mysql.jdbc.Driver"/>
         <property name="javax.persistence.jdbc.url"
-        value="jdbc:mysql://amazingsoft.com.br:3306/posdb"/>
+        value="jdbc:mysql://localhost:3306/posdb"/>
         <property name="javax.persistence.jdbc.user"
         value="usuario"/>
         <property name="javax.persistence.jdbc.password"
