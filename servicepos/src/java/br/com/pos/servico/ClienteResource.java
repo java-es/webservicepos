@@ -4,6 +4,7 @@ import br.com.pos.controle.ClienteControle;
 import br.com.pos.controle.IControle;
 import br.com.pos.modelo.Cliente;
 import br.com.pos.modelo.Resposta;
+import br.com.pos.modelo.Usuario;
 import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -68,10 +69,10 @@ public class ClienteResource
     @POST
     @Path("/json/buscaTodos")
     @Produces("application/json")
-    public List<Cliente> buscaTodos(Cliente cliente) 
+    public List<Cliente> buscaTodos(Usuario usuario) 
     {
         IControle clienteControle = new ClienteControle();
-        return clienteControle.buscarTodosbyId(cliente.getUsuario().getIdUsuario());
+        return clienteControle.buscarTodosbyId(usuario.getIdUsuario());
     }
 
     @GET

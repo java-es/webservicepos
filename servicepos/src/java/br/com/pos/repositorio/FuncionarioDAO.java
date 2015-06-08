@@ -132,7 +132,7 @@ public class FuncionarioDAO implements IRepositorio<Funcionario>
         }
         catch(Exception ex)
         {
-           
+           System.out.println("TESTE: "+ex.getMessage());
         }
         
         return funcionarios;

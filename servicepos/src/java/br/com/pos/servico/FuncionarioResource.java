@@ -4,6 +4,7 @@ import br.com.pos.controle.FuncionarioControle;
 import br.com.pos.controle.IControle;
 import br.com.pos.modelo.Funcionario;
 import br.com.pos.modelo.Resposta;
+import br.com.pos.modelo.Usuario;
 import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -30,10 +31,13 @@ public class FuncionarioResource
     
     @GET
     @Path("/xml/teste")
-    @Produces("application/xml")
-    public String teste()
+    @Produces("application/json")
+    public Funcionario teste()
     {
-        return "<xml>Teste</xml>";
+        Funcionario func = new Funcionario();
+        func.setCpf("111111");
+        func.setNome("Teste");
+        return func;
     }
     
      @GET
@@ -86,10 +90,10 @@ public class FuncionarioResource
     @POST
     @Path("/json/buscaTodos")
     @Produces("application/json")
-    public List<Funcionario> buscaTodos(Funcionario funcionario)
+    public List<Funcionario> buscaTodos(Usuario usuario)
     {
         IControle funcionarioControle = new FuncionarioControle();
-        return funcionarioControle.buscarTodosbyId(funcionario.getUsuario().getIdUsuario());
+        return funcionarioControle.buscarTodosbyId(usuario.getIdUsuario());
     }
 
     @GET

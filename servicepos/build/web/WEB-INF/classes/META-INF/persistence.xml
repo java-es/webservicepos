@@ -17,9 +17,9 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
         <property name="javax.persistence.jdbc.url"
         value="jdbc:mysql://amazingsoft.com.br:3306/posdb"/>
         <property name="javax.persistence.jdbc.user"
-        value="usuario"/>
+        value="wanderson"/>
         <property name="javax.persistence.jdbc.password"
-        value="senha"/>
+        value="@mysqlinnovar$234"/>
         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
         <property name="hibernate.show_sql" value="true" />
         <property name="hibernate.hbm2ddl.auto" value="update"/>
